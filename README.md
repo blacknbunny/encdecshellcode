@@ -20,5 +20,5 @@ Decryption:
 
 http://shell-storm.org/shellcode/
 
-## Picture Of The Help Section
-![](http://prntscr.com/l99qv1)
+## Picture Of Tools Help Section
+![](https://i.imgur.com/ZJbYtQH.png)
