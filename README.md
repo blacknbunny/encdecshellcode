@@ -13,7 +13,7 @@ git clone https://github.com/blacknbunny/Shellcode-Encrypter-Decrypter.git && py
 Encryption:
     python encdecshellcode.py --shellcode \x41\x41\x42\x42 --key SECRETKEY --option encrypt
 Decryption:
-    python encdecshellcode.py --shellcode \x41\x41\x42\x42 --key SECRETKEY --option encrypt
+    python encdecshellcode.py --shellcode \x41\x41\x42\x42 --key SECRETKEY --option decrypt
 ```
 
 ## Finding Shellcode For Any Architecture
