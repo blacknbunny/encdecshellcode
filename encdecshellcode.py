@@ -73,7 +73,7 @@ def main():
         else:
             PrintHelp()
     except Exception as e:
-        #PrintHelp()
+        PrintHelp()
         print(e)
 
 if __name__ == '__main__':
