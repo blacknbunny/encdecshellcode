@@ -2,9 +2,9 @@ import argparse
 from sys import argv, stdout, exit
 
 parser = argparse.ArgumentParser(description="Encrypting & Decrypting Shellcode")
-parser.add_argument('-s', '--shellcode', help='Shellcode To Encrypt or Decrypt')
-parser.add_argument('-k', '--key', help='Key of Shellcode To Encrypt or Decrpyt', default='key')
-parser.add_argument('-o', '--option', help='Argument For Encrypting or Decrypting Shellcode')
+parser.add_argument('-s', '--shellcode', help='Shellcode To Encrypt & Decrypt')
+parser.add_argument('-k', '--key', help='Key Of The Shellcode To Encrypt & Decrpyt', default='key')
+parser.add_argument('-o', '--option', help='Argument For Encrypting or Decrypting The Shellcode')
 
 args = parser.parse_args()
 
