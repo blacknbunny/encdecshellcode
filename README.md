@@ -24,5 +24,17 @@ Decryption:
 
 http://shell-storm.org/shellcode/
 
-## Picture Of Tools Help Section
-![](https://i.imgur.com/ZJbYtQH.png)
+## Help
+```
+usage: enc.py [-h]  [-s SHELLCODE]  [-k KEY]  [-o OPTION]
+
+Encrypting & Decrypting Shellcode
+
+optional arguments:
+       -h,  --help			show this help message and exit
+        -s  SHELLCODE,	--shelcode SHELCODE
+				Shellcode To Encrypt & Decrypt
+        -k  KEY,  --key KEY		Key Of The Shellcode To Encrypt & Decrypt
+        -o  OPTION,   --option  OPTION
+				Argument For Encrypting & Decrypting Shellcode
+```
