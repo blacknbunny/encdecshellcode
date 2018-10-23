@@ -26,12 +26,13 @@ def EncryptShellcode(shellcode, key):
     
     for y in range(0, len(shellcode_encrypted_hex)):
         shellcode_replaced_hex += shellcode_encrypted_hex[y].replace('0x', r'\x')
-
-    print( "Encrypted Shellcode = " + shellcode_replaced_hex )
+    
+    return shellcode_replaced_hex
 
 def DecryptShellcode(shellcode, key):
     shellcode_decrypted = []
     shellcode_xor_headers = []
+
     shellcode_replaced_hex = ''
     string = ''
     
@@ -54,7 +55,9 @@ def DecryptShellcode(shellcode, key):
     for h in range(0, len(shellcode_decrypted)):
         shellcode_replaced_hex += shellcode_decrypted[h].replace('0x', r'\x')
 
-    print( "Decrypted Shellcode = " + shellcode_replaced_hex )
+    print( "Real Shellcode = " + shellcode_replaced_hex)
+    
+    return EncryptShellcode(shellcode, key)
 def PrintHelp():
     parser.print_help()
     exit(1)
@@ -64,9 +67,9 @@ def main():
         shellcode = args.shellcode
         key = args.key
         if args.option == "encrypt":
-            EncryptShellcode(shellcode, key)
+            print( "Encrypted Shellcode = " + EncryptShellcode(shellcode, key) )
         elif args.option == "decrypt":
-            DecryptShellcode(shellcode, key)
+            print( "\nDecrypted Shellcode = " + DecryptShellcode(shellcode, key) )
         else:
             PrintHelp()
     except Exception as e:
