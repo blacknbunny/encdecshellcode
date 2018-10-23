@@ -21,4 +21,4 @@ Decryption:
 http://shell-storm.org/shellcode/
 
 ## Picture Of The Help Section
-![](http://prntscr.com/l99qv1)
+!()[http://prntscr.com/l99qv1]
