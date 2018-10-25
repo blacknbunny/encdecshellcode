@@ -4,7 +4,9 @@ A Shellcode Encrypter &amp; Decrypter, Using XOR Cipher to enc and dec shellcode
 ## Installation
 
 ```
-git clone https://github.com/blacknbunny/Shellcode-Encrypter-Decrypter.git && cd Shellcode-Encrypter-Decrypter/ && python enc.py --help
+git clone https://github.com/blacknbunny/Shellcode-Encrypter-Decrypter.git && cd Shellcode-Encrypter-Decrypter/
+
+python enc.py --help
 ```
 
 ## Usage Example
