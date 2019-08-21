@@ -28,7 +28,7 @@ http://shell-storm.org/shellcode/
 
 ## Help
 ```
-usage: enc.py [-h]  [-s SHELLCODE]  [-k KEY]  [-o OPTION]
+usage: encdecshellcode.py [-h]  [-s SHELLCODE]  [-k KEY]  [-o OPTION]
 
 Encrypting & Decrypting Shellcode
 
