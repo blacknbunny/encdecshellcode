@@ -9,7 +9,7 @@ parser.add_argument('-o', '--option', help='Argument For Encrypting or Decryptin
 args = parser.parse_args()
 
 def EncryptShellcode(shellcode, key):
-    
+
     shellcode_encrypted_hex = []
     shellcode_decrypted_hex = []
     shellcode_replaced_hex = ''
@@ -19,14 +19,14 @@ def EncryptShellcode(shellcode, key):
     for d in range(0, len(shellcode) / 4):
         count += 4
         shellcode_decrypted_hex.append(shellcode[count-4:count].replace(r'\x', ''))
-    
+
     for x in range(0, len(shellcode_decrypted_hex)):
         for d in range(0, len(key)):
             shellcode_encrypted_hex.append(hex(ord(shellcode_decrypted_hex[x].decode('hex')) ^ ord(key[d])))
-    
+
     for y in range(0, len(shellcode_encrypted_hex)):
         shellcode_replaced_hex += shellcode_encrypted_hex[y].replace('0x', r'\x')
-    
+
     return shellcode_replaced_hex
 
 def DecryptShellcode(shellcode, key):
@@ -35,7 +35,7 @@ def DecryptShellcode(shellcode, key):
 
     shellcode_replaced_hex = ''
     string = ''
-    
+
     for x in shellcode:
         string += shellcode.replace(r'\x', '')
         break
@@ -55,9 +55,7 @@ def DecryptShellcode(shellcode, key):
     for h in range(0, len(shellcode_decrypted)):
         shellcode_replaced_hex += shellcode_decrypted[h].replace('0x', r'\x')
 
-    print( "Real Shellcode = " + shellcode_replaced_hex)
-    
-    return EncryptShellcode(shellcode, key)
+    return shellcode_replaced_hex
 def PrintHelp():
     parser.print_help()
     exit(1)
